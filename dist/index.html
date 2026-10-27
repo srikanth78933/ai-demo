@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Offline webpage encoder and decoder for local HTML content."
+    />
+    <title>Offline Webpage Encoder / Decoder</title>
+    <script type="module" crossorigin src="/assets/index-C5lRX67m.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BQlcwE6s.css">
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand-wrap">
+          <div class="brand-mark">OFF</div>
+          <div>
+            <h1>Offline Webpage Tool</h1>
+          </div>
+        </div>
+        <span class="status-pill">Offline Ready</span>
+      </header>
+
+      <main class="workspace">
+        <section class="panel input-panel">
+          <div class="panel-header">
+            <h2>Input Data</h2>
+            <label class="file-upload">
+              <input id="fileInput" type="file" accept=".html,.htm,.txt,.json,.xml,.md" />
+              <span>Load File</span>
+            </label>
+          </div>
+
+          <textarea id="sourceInput" placeholder="Paste HTML or plain text here...">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Sample Offline Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hello from Offline Encoder&lt;/h1&gt;
+  &lt;p&gt;This content can be encoded and decoded locally.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+
+          <div class="action-row">
+            <button id="encodeBtn" class="primary-btn">Encode</button>
+            <button id="decodeBtn" class="secondary-btn">Decode</button>
+            <button id="sampleBtn" class="ghost-btn">Load Sample</button>
+            <button id="clearBtn" class="ghost-btn">Clear</button>
+          </div>
+        </section>
+
+        <section class="panel output-panel">
+          <div class="panel-header">
+            <h2>Output</h2>
+            <div class="output-actions">
+              <button id="copyBtn" class="mini-btn">Copy</button>
+              <button id="downloadBtn" class="mini-btn">Download</button>
+            </div>
+          </div>
+
+          <textarea id="outputArea" readonly placeholder="Encoded or decoded result will appear here..."></textarea>
+          <div id="status" class="status-box success">Ready to process local data.</div>
+        </section>
+      </main>
+    </div>
+
+  </body>
+</html>
